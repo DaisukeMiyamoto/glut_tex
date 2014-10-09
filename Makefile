@@ -1,11 +1,12 @@
 # Makefile
 
-CC     = gcc
-CFLAGS = -Wall -O2
-LDLIBS = -lglut -lGLU -lGL -lm
+CC       = gcc
+CFLAGS   = -Wall -O2
+LDLIBS   = -lglut -lGLU -lGL -lm
 INCLUDES = glut_wrapper.h
-OBJS   = glut_wrapper.o test_glut.o
-PROG   = test_texture
+SRC      = glut_wrapper.c test_glut.c
+OBJS     = glut_wrapper.o test_glut.o
+PROG     = test_glut
 
 
 all: $(PROG)
@@ -13,7 +14,7 @@ all: $(PROG)
 $(PROG): $(OBJS)
 	cc -o $@ $(OBJS) $(LDLIBS)
 
-*.o : $(INCLUDES)
+*.o : $(INCLUDES) $(SRC)
 
 .c.o:
 

@@ -8,6 +8,8 @@
 
 #include "glut_wrapper.h"
 
+#define WINDOW_SIZE 800
+
 typedef struct _Texture {
   unsigned int width;
   unsigned int height;
@@ -90,7 +92,7 @@ int main(int argc, char** argv)
 {
   glutInit(&argc, argv);
 
-  glut_wrapper_init(argv[0]);
+  glut_wrapper_init(argv[0], WINDOW_SIZE, WINDOW_SIZE);
 
   setup_texture(&_tex);
 

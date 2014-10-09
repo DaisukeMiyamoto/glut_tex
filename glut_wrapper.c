@@ -48,9 +48,10 @@ void polarview(void);
 static void (*_anmfunc)(void);
 
 
-void glut_wrapper_init(char *progname)
+void glut_wrapper_init(char *progname, int window_width, int window_height)
 {
-  int width = 800, height = 800;
+  int width = window_width;
+  int height = window_height;
   const float texcolor[] = { 1.0, 1.0, 1.0, 1.0 };
 
   // initialize valiables
