@@ -3,9 +3,9 @@
 CC     = gcc
 CFLAGS = -Wall -O2
 LDLIBS = -lglut -lGLU -lGL -lm
-INCLUDES = test_glut.h
-OBJS   = test_glut.o
-PROG   = a.out
+INCLUDES = glut_wrapper.h
+OBJS   = glut_wrapper.o test_glut.o
+PROG   = test_texture
 
 
 all: $(PROG)
